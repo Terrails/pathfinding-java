@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'pathfinding'
+version '1.0-SNAPSHOT'
+
+application {
+    mainClass = "pathfinding.Main"
+    mainModule = 'pathfinding.main' // name defined in module-info.java
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+}
+
+jar {
+    manifest.attributes 'Implementation-Title': 'Pathfinding', 'Implementation-Version': version, 'Main-Class': 'pathfinding.Main'
+}
+
+test {
+    useJUnitPlatform()
+}
